@@ -12,6 +12,6 @@ El conjunto de datos está disponible para descargar aquí: 'https://bit.ly/3Iog
 
 ❏ BigQuery (SQL).
 
-❏ Power BI (Fórmulas DAX).
+❏ PowerBI (Fórmulas DAX).
 
 
