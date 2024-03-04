@@ -1,0 +1,117 @@
+❏ Tenemos 3 tablas: Tabla rooms (Dimensión), Tabla hosts (Dimensión), Tabla reviews (Hechos).
+
+➨ Procesar y preparar base de datos
+
+☑️ Identificando nulos | Hosts
+
+SELECT
+  COUNTIF(hostid IS NULL) AS host_id,
+  COUNTIF(hostname IS NULL) AS host_name,
+FROM
+  `airbnb-413517.pruebas.hosts`;
+
+☑️ Identificando nulos | Reviews
+
+SELECT
+  COUNTIF(id IS NULL) AS id,
+  COUNTIF(host_id IS NULL) AS host_id,
+  COUNTIF(price IS NULL) AS price,
+  COUNTIF(number_of_reviews IS NULL) AS number_of_reviews,
+  COUNTIF(last_review IS NULL ) AS last_review,
+  COUNTIF(reviews_per_month IS NULL) AS reviews_per_month,
+  COUNTIF(calculated_host_listings_count IS NULL) AS calculated_host_listings_count,
+  COUNTIF(availability_365 IS NULL) AS availability_365
+FROM
+  `airbnb-413517.pruebas.reviews`;
+
+☑️ Identificando nulos | Rooms
+
+SELECT
+  COUNTIF(id IS NULL) AS id,
+  COUNTIF(name IS NULL) AS name,
+  COUNTIF(neighbourhood IS NULL) AS neighbourhood,
+  COUNTIF(neighbourhood_group IS NULL) AS neighbourhood_group,
+  COUNTIF(latitude IS NULL ) AS latitude,
+  COUNTIF(longitude IS NULL) AS longitude,
+  COUNTIF(room_type IS NULL) AS room_type,
+  COUNTIF(minimum_nights IS NULL) AS minimum_nights
+FROM
+  `airbnb-413517.pruebas.rooms`;
+
+☑️ Duplicados | Hosts
+
+SELECT
+  hostid,
+  hostname,
+  COUNT(*) AS cantidad
+FROM
+  `airbnb-413517.pruebas.hosts`
+GROUP BY
+  hostid,
+  hostname 
+
+✅ Creando view | host_clean
+
+SELECT
+  DISTINCT hostid,
+  COALESCE(REGEXP_REPLACE(hostname, r'[0-9]', ' '), '0') AS hostname
+FROM
+  `airbnb-413517.pruebas.hosts`
+WHERE
+  REGEXP_CONTAINS(hostid, r'^[0-9]+$');
+
+✅ Creando view | reviews_clean
+
+WITH
+  NumericalRows AS (
+  SELECT
+    id,
+    host_id,
+    price,
+    IFNULL(CAST(number_of_reviews AS INT64), 0) AS number_of_reviews,
+    PARSE_DATE('%Y-%m-%d', last_review) AS last_review,
+    CAST(COALESCE(reviews_per_month, 0) AS STRING) AS reviews_per_month,
+    calculated_host_listings_count,
+    availability_365
+  FROM
+    `airbnb-413517.pruebas.reviews`
+  WHERE
+    SAFE_CAST(id AS INT64) IS NOT NULL )
+SELECT
+  id,
+  host_id,
+  price,
+  number_of_reviews,
+  last_review,
+  reviews_per_month,
+  calculated_host_listings_count,
+  availability_365
+FROM
+  NumericalRows;
+
+✅ Creando view | rooms_clean
+
+WITH
+  rooms_clean AS (
+  SELECT
+    *,
+    ROW_NUMBER() OVER (PARTITION BY id ORDER BY id) AS ROW
+  FROM
+    `airbnb-413517.pruebas.rooms` )
+SELECT
+  id,
+  name,
+  neighbourhood,
+  neighbourhood_group,
+  latitude,
+  CAST(longitude AS FLOAT64) AS longitude,
+  room_type,
+  minimum_nights,
+  ROW,
+FROM
+  rooms_clean
+WHERE
+  ROW = 1
+  AND REGEXP_CONTAINS(id, r'^[0-9]+$');
+
+➨ Se importan las tablas a PowerBI para crear columnas con fórmulas DAX. 
