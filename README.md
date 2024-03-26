@@ -8,11 +8,17 @@ Integrando datos y relaciones entre tablas, se busca optimizar la disponibilidad
 
 ## Objetivo del proyecto
 
-El objetivo fue proporcionar una base sólida para decisiones informadas en el dinámico mundo de Airbnb.
+▪️ Visualizar tendencias.
+
+▪️ Identificar patrones.
+
+▪️ Comprender los factores que influyen en la ocupación de las habitaciones.
 
 ## Insumos
 
-El conjunto de datos está disponible para descargar aquí 'https://bit.ly/3IogkGk'
+En este proyecto se tiene un conjunto de datos estructurado con 3 tablas (2 tablas de dimensiones y una tabla de hecho) con información sobre las habitaciones disponibles para reservar en Airbnb.
+
+El conjunto de datos está disponible para descargar aquí  'https://bit.ly/3IogkGk'
 
 ## Herramientas que se usaron para el análisis
 
@@ -34,13 +40,19 @@ El conjunto de datos está disponible para descargar aquí 'https://bit.ly/3Iogk
 
 ### ¿Cuál fue el proceso de trabajo?
 
-▪️ Relacionar tablas en Power BI para unir conjuntos de datos de diversas fuentes.
+▪️ Procesar y preparar la base de datos, esto implica identificar, corregir o eliminar errores, inconsistencias y valores atípicos en los conjuntos de datos.
 
-▪️ Utilizar columnas calculadas y fórmulas DAX para realizar cálculos personalizados y manipular datos según necesidades específicas.
+▪️ Relacionar tablas en Power BI para unir conjuntos de datos de diversas fuentes utilizando los id como llave.
+
+▪️ Creación de nuevas columnas calculadas en PowerBI utilizando fórmulas simples.
+
+▪️ Utilizar fórmulas DAX para realizar cálculos personalizados y manipular datos según necesidades específicas.
 
 ▪️ Crear paneles con visualizaciones avanzadas, como mapas geográficos, para representar visualmente los datos.
 
 ▪️ Identificar patrones, tendencias y relaciones en los datos visualizados para mejorar la toma de decisiones informadas.
+
+▪️ Crear un dashboard con Data Storytelling.
 
 ### Chequea mis consultas en SQL
 
