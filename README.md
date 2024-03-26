@@ -1,4 +1,5 @@
-# Airbnb
+# <h1 align="center"> Análisis comparativo de los ingresos de <img src="https://raw.githubusercontent.com/MayteLlerena/Airbnb/main/logo.airbnb.png" width="100"> en los distritos de Nueva York
+ </h1>
 
 En este proyecto, me enfoqué en analizar la disponibilidad de habitaciones en Airbnb utilizando herramientas de Business Intelligence. Busqué maximizar la eficiencia y rentabilidad tanto para los anfitriones como para la plataforma. 
 
