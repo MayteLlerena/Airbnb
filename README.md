@@ -1,9 +1,10 @@
 # <h1 align="center"> Análisis comparativo de los ingresos de <img src="https://raw.githubusercontent.com/MayteLlerena/Airbnb/main/airbnb.logo.png" width="110"> en los distritos de New York
  </h1>
 
-En este proyecto, me enfoqué en analizar la disponibilidad de habitaciones en Airbnb utilizando herramientas de Business Intelligence. Busqué maximizar la eficiencia y rentabilidad tanto para los anfitriones como para la plataforma. 
 
-Exploré datos de la interacción entre anfitriones y huéspedes para descubrir ideas que optimicen la disponibilidad, aumenten ingresos y mejoren la experiencia del usuario. Utilicé estrategias de integración de datos y técnicas avanzadas de BI para visualizar tendencias, identificar patrones y entender los factores que afectan la ocupación de habitaciones. 
+En un mundo donde la economía compartida y la hospitalidad se encuentran, plataformas como Airbnb han revolucionado la búsqueda y oferta de alojamientos. La interacción entre anfitriones y huéspedes genera una amplia gama de datos, desde detalles de propiedades hasta retroalimentación, creando una oportunidad para aplicar técnicas de BI. 
+
+Integrando datos y relaciones entre tablas, se busca optimizar la disponibilidad de habitaciones, aumentar los ingresos y mejorar la experiencia del usuario tanto para los anfitriones como para Airbnb. 
 
 ## Objetivo del proyecto
 
@@ -33,11 +34,18 @@ El conjunto de datos está disponible para descargar aquí 'https://bit.ly/3Iogk
 
 ### ¿Cuál fue el proceso de trabajo?
 
+▪️ Relacionar tablas en Power BI para unir conjuntos de datos de diversas fuentes.
 
+▪️ Utilizar columnas calculadas y fórmulas DAX para realizar cálculos personalizados y manipular datos según necesidades específicas.
+
+▪️ Crear paneles con visualizaciones avanzadas, como mapas geográficos, para representar visualmente los datos.
+
+▪️ Identificar patrones, tendencias y relaciones en los datos visualizados para mejorar la toma de decisiones informadas.
 
 ### Chequea mis consultas en SQL
 
+▪️ Aquí: https://bit.ly/43xMSHE
 
 ### Dashboard 
 
-![Airbnb]()
+![Airbnb](https://raw.githubusercontent.com/MayteLlerena/Airbnb/main/Dashboard-Airbnb.png)
