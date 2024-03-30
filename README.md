@@ -38,7 +38,7 @@ El conjunto de datos está disponible para descargar aquí  'https://bit.ly/3Iog
 
 ▪️ Fórmulas DAX (utilizado en PowerBI)
 
-### ¿Cuál fue el proceso de trabajo?
+## ¿Cuál fue el proceso de trabajo?
 
 ▪️ Procesar y preparar la base de datos, esto implica identificar, corregir o eliminar errores, inconsistencias y valores atípicos en los conjuntos de datos.
 
@@ -54,10 +54,10 @@ El conjunto de datos está disponible para descargar aquí  'https://bit.ly/3Iog
 
 ▪️ Crear un dashboard con Data Storytelling.
 
-### Chequea mis consultas en SQL
+## Chequea mis consultas en SQL
 
 ▪️ Aquí: https://bit.ly/43xMSHE
 
-### Dashboard 
+## Dashboard 
 
 ![Airbnb](https://raw.githubusercontent.com/MayteLlerena/Airbnb/main/Dashboard-Airbnb.png)
