@@ -56,7 +56,7 @@ El conjunto de datos está disponible para descargar aquí  'https://bit.ly/3Iog
 
 ## Chequea mis consultas en SQL
 
-▪️ Aquí: https://bit.ly/43xMSHE
+▪️ Consultas SQL realizadas en GoogleCloud, disponibles aquí 'https://bit.ly/43xMSHE'
 
 ## Dashboard 
 
